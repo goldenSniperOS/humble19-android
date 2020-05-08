@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "801070199914",
+    "firebase_url": "https://bluetrace-covid19.firebaseio.com",
+    "project_id": "bluetrace-covid19",
+    "storage_bucket": "bluetrace-covid19.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:801070199914:android:8ec66f2d0f33f17b0d0613",
+        "android_client_info": {
+          "package_name": "io.bluetrace.opentrace.stg"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "801070199914-gub0srimkf1muepfvekhc6u4838iiojr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwI3nujBtsPiRGicwtwoK90_Sz8wZITTo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "801070199914-gub0srimkf1muepfvekhc6u4838iiojr.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "801070199914-bgu9sbue7hdsdf2l95beiro4t0bsq58s.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.enelyst.bluedemo"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

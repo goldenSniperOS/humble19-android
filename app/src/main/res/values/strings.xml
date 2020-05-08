@@ -1,0 +1,92 @@
+<resources>
+    <string name="see_connections">See connections</string>
+    <string name="stop">Stop</string>
+    <string name="permission_location_rationale">Please allow Location Permissions - Google requires this for your phone to scan for another phone’s Bluetooth. We do not use or store your location.</string>
+    <string name="permission_write_rationale">OpenTrace needs save files for logs (Debug builds only)</string>
+    <string name="ble_not_supported">This device does not support BLE</string>
+
+    <string name="tv_onboarding_title">Help stop the spread of COVID-19 by turning Bluetooth on</string>
+    <string name="tv_onboarding_desc">If you had close contact with a COVID-19 case, we help the health authorities call you more quickly, to provide guidance and care.</string>
+    <string name="tv_onboarding_desc_sub">To protect those around you, OTC may also ask you to share your data.</string>
+    <string name="i_want_to_help">I want to help</string>
+
+    <string name="tv_howitworks_title">How OpenTrace works</string>
+    <string name="tv_howitworks_explanation_1">We use Bluetooth signals to determine if you are near another OpenTrace user.</string>
+    <string name="tv_howitworks_explanation_2">This proximity data is encrypted and stored only on your phone.</string>
+    <string name="tv_howitworks_explanation_3">OTC will seek your consent to upload the data, if it\'s needed for contact tracing.</string>
+    <string name="mobile_number">Número de celular</string>
+    <string name="register_number">Registra tu número de celular</string>
+    <string name="register_number_details">Te contactaremos si tenemos un caso cercano de coronavirus.</string>
+    <string name="register_number_family">Estás configurando esto para un familiar? \nUsa su número en vez de el tuyo.</string>
+    <string name="invalid_length">Necesita ser de 9 dígitos</string>
+    <string name="invalid_number">Número de celular inválido</string>
+
+    <string name="enter_otp">Ingresando el Código</string>
+    <string name="otp_sent">Hemos enviado un código de 6 dígitos a %s.</string>
+    <string name="resend_code"><u>Reenviar Código</u></string>
+
+    <string name="setup_app_permission">\Configurando Permisos</string>
+    <string name="setup_app_permission_title">Selecciona \'<b>Si</b>\' o \'<b>Permitir</b>\' en las siguientes pantallas para activar los permisos.</string>
+    <string name="bluetooth">1. Bluetooth</string>
+    <string name="location_permissions">2. Permisos de Ubicación</string>
+    <string name="battery_optimiser_opt">3. Optimizador de Batería</string>
+    <string name="notes">Android necesita permisos de ubicación para que Bluetooth funcione. No tenemos acceso a su ubicación física.</string>
+    <string name="proceed">Continuar</string>
+    <string name="continue_">Continuar</string>
+    <string name="get_otp">Recibir Código</string>
+    <string name="wrong_number"><u>Cambiar número</u></string>
+    <string name="app_permission_fully_setup">Todos los permisos están configurados</string>
+    <string name="app_permission_fully_setup_desc">Deje todas las configuraciones activadas hasta que finalice el brote.</string>
+
+    <string name="send_otp">Te enviaremos un código de 6 dígitos</string>
+
+    <string name="title_home">Home</string>
+    <string name="title_upload">Upload</string>
+    <string name="title_help">Help</string>
+
+    <string name="how_to_help">Cómo puede ayudar a detener la propagación de COVID-19?</string>
+    <string name="help_action">Mantenga la aplicación abierta y deje que se ejecute en segundo plano hasta el final del brote.</string>
+
+    <string name="app_permission_status">App Permissions Status</string>
+    <string name="bluetooth_on">Bluetooth: On</string>
+    <string name="location_on">Location Permission: On</string>
+    <string name="battery_optimiser">Battery Optimisation: Off</string>
+    <string name="push_noti">Push Notification: On</string>
+    <string name="share_this_app">Share this app</string>
+    <string name="ask_friend">Ask friends and family to help</string>
+    <string name="help_us_identify">Help stop the virus spread by allowing all permissions</string>
+    <string name="restart_app_setup">Complete app setup</string>
+    <string name="upload_data">Upload Data</string>
+    <string name="for_official_use">For use by contact tracers</string>
+    <string name="data_uploaded">Data has been uploaded to contact tracers</string>
+    <string name="upload_agreement">By uploading, you agree to share with OTC your OpenTrace proximity data for the past 21 days. <b>We do not collect any geolocation or personal data.</b></string>
+    <string name="enter_code">Enter Code</string>
+    <string name="submit">Submit</string>
+    <string name="open_location_setting">Application needs location permission in order to work. Do you want to enable location permission?</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="setup_incomplete">Setup is incomplete!</string>
+    <string name="ack_title">Es necesario tu consentimiento para lo siguiente:</string>
+    <string name="ack_mobile">Para almacenar tu número telefónico en el registro nacional</string>
+    <string name="ack_data">Para permitir que los usuarios de esta aplicación envíen información de encuentros con usted, si se confirma o sospecha que tienen COVID-19</string>
+    <string name="otp">Ingrese el código a su celular a través de sms</string>
+    <string name="expire">Tu código expira en</string>
+    <string name="keep_push_on">Mantenga también las notificaciones automáticas activadas, para que podamos avisarle si la aplicación no está escaneando.</string>
+    <string name="verification_failed">Verificación fallida. Por favor intente nuevamente</string>
+    <string name="invalid_otp">Código inválido</string>
+    <string name="unknown_error">An error has occurred. Please try again</string>
+    <string name="must_be_six_digit">Must be a 6-digit number</string>
+    <string name="invalid_user">Your account has been disabled. Please contact support.</string>
+    <string name="too_many_requests">Too many requests. Please try again later.</string>
+
+    <string name="privacy_safeguards"><u>términos de privacidad</u></string>
+
+    <string name="service_ok_title">¡Humble19 está escaneando para mantenerlo a salvo! :)</string>
+    <string name="service_ok_body">Reinicia el teléfono si esta notificación desaparece</string>
+
+    <string name="service_not_ok_title">Oh no! :(</string>
+    <string name="service_not_ok_body">OpenTrace is not scanning.</string>
+    <string name="service_not_ok_action">Check app now</string>
+
+    <string name="share_message">Join me in stopping the spread of COVID-19! Download OpenTrace. Go to: https://bluetrace.io</string>
+</resources>
