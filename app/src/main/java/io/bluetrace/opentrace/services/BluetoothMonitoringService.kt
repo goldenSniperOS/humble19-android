@@ -290,7 +290,7 @@ class BluetoothMonitoringService : Service(), CoroutineScope {
                 Utils.scheduleNextHealthCheck(this.applicationContext, healthCheckInterval)
                 Utils.scheduleRepeatingPurge(this.applicationContext, purgeInterval)
                 Utils.scheduleBMUpdateCheck(this.applicationContext, bmCheckInterval)
-                Utils.scheduleUploadRecords(this.applicationContext, uploadInterval)
+                //Utils.scheduleUploadRecords(this.applicationContext, uploadInterval)
                 actionStart()
             }
 
@@ -329,8 +329,8 @@ class BluetoothMonitoringService : Service(), CoroutineScope {
             }
 
             Command.ACTION_UPLOAD -> {
-                Utils.scheduleUploadRecords(this.applicationContext, uploadInterval)
-                uploadRecords()
+                //Utils.scheduleUploadRecords(this.applicationContext, uploadInterval)
+                //uploadRecords()
             }
 
             else -> CentralLog.i(TAG, "Invalid / ignored command: $cmd. Nothing to do")
@@ -584,7 +584,7 @@ class BluetoothMonitoringService : Service(), CoroutineScope {
         job.cancel()
     }
 
-    private fun uploadRecords() {
+    public fun uploadRecords() {
         CentralLog.i(TAG, "Uploading Records")
         var observableStreetRecords = Observable.create<List<StreetPassRecord>> {
             val result = StreetPassRecordStorage(this.applicationContext).getAllRecords()

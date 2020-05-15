@@ -74,6 +74,24 @@
                     android:layout_height="wrap_content"
                     android:text="@string/help_action" />
 
+                <Button
+                    android:id="@+id/buttonUpload"
+                    android:layout_width="300dp"
+                    android:layout_marginTop="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|bottom"
+                    android:layout_marginBottom="30dp"
+                    android:background="@drawable/gradient_peru"
+                    android:fontFamily="@font/font"
+                    android:text="@string/upload_encounters"
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:textFontWeight="600"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent" />
+
             </LinearLayout>
 
 

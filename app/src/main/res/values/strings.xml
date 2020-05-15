@@ -24,6 +24,7 @@
     <string name="enter_otp">Ingresando el Código</string>
     <string name="otp_sent">Hemos enviado un código de 6 dígitos a %s.</string>
     <string name="resend_code"><u>Reenviar Código</u></string>
+    <string name="upload_encounters"><u>Subir Encuentros</u></string>
 
     <string name="setup_app_permission">\Configurando Permisos</string>
     <string name="setup_app_permission_title">Selecciona \'<b>Si</b>\' o \'<b>Permitir</b>\' en las siguientes pantallas para activar los permisos.</string>

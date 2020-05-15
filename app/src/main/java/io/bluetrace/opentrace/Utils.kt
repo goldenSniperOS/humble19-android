@@ -246,7 +246,7 @@ object Utils {
         )
     }
 
-    fun scheduleUploadRecords(context: Context, intervalMillis: Long) {
+    /*fun scheduleUploadRecords(context: Context, intervalMillis: Long) {
         val nextIntent = Intent(context, BluetoothMonitoringService::class.java)
         nextIntent.putExtra(
             BluetoothMonitoringService.COMMAND_KEY,
@@ -259,7 +259,7 @@ object Utils {
             nextIntent,
             intervalMillis
         )
-    }
+    }*/
 
     fun broadcastDeviceScanned(
         context: Context,
