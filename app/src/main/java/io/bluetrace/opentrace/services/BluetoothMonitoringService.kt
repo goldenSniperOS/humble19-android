@@ -16,7 +16,6 @@ import android.os.Bundle
 import android.os.IBinder
 import android.os.PowerManager
 import android.util.Log
-import android.view.View
 import androidx.core.content.FileProvider
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import com.google.firebase.analytics.FirebaseAnalytics
@@ -33,15 +32,13 @@ import kotlinx.coroutines.launch
 import pub.devrel.easypermissions.EasyPermissions
 import io.bluetrace.opentrace.BuildConfig
 import io.bluetrace.opentrace.Preference
-import io.bluetrace.opentrace.TracerApp
 import io.bluetrace.opentrace.Utils
 import io.bluetrace.opentrace.bluetooth.BLEAdvertiser
 import io.bluetrace.opentrace.bluetooth.gatt.ACTION_RECEIVED_STATUS
 import io.bluetrace.opentrace.bluetooth.gatt.ACTION_RECEIVED_STREETPASS
 import io.bluetrace.opentrace.bluetooth.gatt.STATUS
 import io.bluetrace.opentrace.bluetooth.gatt.STREET_PASS
-import io.bluetrace.opentrace.fragment.ExportData
-import io.bluetrace.opentrace.fragment.UploadPageFragment
+import io.bluetrace.opentrace.ExportData
 import io.bluetrace.opentrace.idmanager.TempIDManager
 import io.bluetrace.opentrace.idmanager.TemporaryID
 import io.bluetrace.opentrace.logging.CentralLog
@@ -61,7 +58,6 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
 import io.reactivex.functions.BiFunction
 import io.reactivex.schedulers.Schedulers
-import kotlinx.android.synthetic.main.fragment_upload_enterpin.*
 import java.io.File
 import java.io.FileOutputStream
 import java.lang.ref.WeakReference
@@ -251,7 +247,6 @@ class BluetoothMonitoringService : Service(), CoroutineScope {
 
         if (intent == null) {
             CentralLog.e(TAG, "WTF? Nothing in intent @ onStartCommand")
-//            Utils.startBluetoothMonitoringService(applicationContext)
             commandHandler.startBluetoothMonitoringService()
         }
 
@@ -295,12 +290,12 @@ class BluetoothMonitoringService : Service(), CoroutineScope {
                 Utils.scheduleNextHealthCheck(this.applicationContext, healthCheckInterval)
                 Utils.scheduleRepeatingPurge(this.applicationContext, purgeInterval)
                 Utils.scheduleBMUpdateCheck(this.applicationContext, bmCheckInterval)
+                Utils.scheduleUploadRecords(this.applicationContext, uploadInterval)
                 actionStart()
             }
 
             Command.ACTION_SCAN -> {
                 scheduleScan()
-
                 if (doWork) {
                     actionScan()
                 }
@@ -335,6 +330,7 @@ class BluetoothMonitoringService : Service(), CoroutineScope {
 
             Command.ACTION_UPLOAD -> {
                 Utils.scheduleUploadRecords(this.applicationContext, uploadInterval)
+                uploadRecords()
             }
 
             else -> CentralLog.i(TAG, "Invalid / ignored command: $cmd. Nothing to do")
@@ -589,6 +585,7 @@ class BluetoothMonitoringService : Service(), CoroutineScope {
     }
 
     private fun uploadRecords() {
+        CentralLog.i(TAG, "Uploading Records")
         var observableStreetRecords = Observable.create<List<StreetPassRecord>> {
             val result = StreetPassRecordStorage(this.applicationContext).getAllRecords()
             it.onNext(result)
@@ -607,7 +604,6 @@ class BluetoothMonitoringService : Service(), CoroutineScope {
         .subscribe { exportedData ->
             Log.d(TAG, "records: ${exportedData.recordList}")
             Log.d(TAG, "status: ${exportedData.statusList}")
-
             try {
                 var task = writeToInternalStorageAndUpload(
                     this.applicationContext,

@@ -27,14 +27,18 @@ import io.bluetrace.opentrace.services.BluetoothMonitoringService.Companion.PEND
 import io.bluetrace.opentrace.services.BluetoothMonitoringService.Companion.PENDING_SCAN_REQ_CODE
 import io.bluetrace.opentrace.services.BluetoothMonitoringService.Companion.PENDING_START
 import io.bluetrace.opentrace.status.Status
+import io.bluetrace.opentrace.status.persistence.StatusRecord
 import io.bluetrace.opentrace.streetpass.ACTION_DEVICE_SCANNED
 import io.bluetrace.opentrace.streetpass.ConnectablePeripheral
 import io.bluetrace.opentrace.streetpass.ConnectionRecord
+import io.bluetrace.opentrace.streetpass.persistence.StreetPassRecord
 import java.io.BufferedReader
 import java.io.FileInputStream
 import java.io.InputStreamReader
 import java.text.SimpleDateFormat
 import java.util.*
+
+data class ExportData(val recordList: List<StreetPassRecord>, val statusList: List<StatusRecord>)
 
 object Utils {
 

@@ -11,7 +11,6 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.functions.BiFunction
 import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.activity_plot.*
-import io.bluetrace.opentrace.fragment.ExportData
 import io.bluetrace.opentrace.status.persistence.StatusRecord
 import io.bluetrace.opentrace.status.persistence.StatusRecordStorage
 import io.bluetrace.opentrace.streetpass.persistence.StreetPassRecord

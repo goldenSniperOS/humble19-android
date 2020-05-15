@@ -49,13 +49,6 @@
             android:name=".onboarding.OnboardingActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".onboarding.HowItWorksActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".onboarding.PreOnboardingActivity"
-            android:screenOrientation="portrait" />
-
-        <activity
             android:name=".onboarding.WebViewActivity"
             android:screenOrientation="portrait" />
         <activity

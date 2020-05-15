@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
 import io.bluetrace.opentrace.onboarding.OnboardingActivity
-import io.bluetrace.opentrace.onboarding.PreOnboardingActivity
 import kotlinx.android.synthetic.main.activity_splash.*
 
 class SplashActivity : AppCompatActivity() {
